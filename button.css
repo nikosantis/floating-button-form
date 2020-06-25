@@ -1,0 +1,273 @@
+#buttonForm {
+  position: fixed;
+  bottom: 0px;
+  display: block;
+  height: 1px;
+  width: 1px;
+  z-index: 9999998;
+}
+
+#buttonForm .wrapper {
+  z-index: 1999999;
+  background-color: transparent;
+  border: none;
+  width: 93px;
+  height: 86px;
+  max-width: 360px;
+  position: fixed;
+  right: 15px;
+  bottom: 0px;
+}
+
+#buttonForm .collapsed-height {
+  height: 86px !important;
+  right: 15px !important;
+  display: block !important;
+}
+
+#buttonForm .expanded-height {
+  max-width: 100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 100vh;
+  right: 0 !important;
+  transition: height 600ms;
+}
+
+@media (min-width: 768px) {
+  #buttonForm .expanded-height {
+    max-width: 320px !important;
+    height: 80% !important;
+    right: 15px !important;
+    border-radius: 7px 7px 0 0;
+  }
+}
+@media (min-width: 992px) {
+  #buttonForm .expanded-height {
+    max-width: 320px !important;
+    height: 70% !important;
+    right: 15px !important;
+    border-radius: 7px 7px 0 0;
+  }
+}
+
+#buttonForm .wrapper .body {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.428571429;
+  display: block;
+}
+
+#buttonForm .widget {
+  transition: height .6s ease;
+  -moz-transition: height .6s ease;
+  -webkit-transition: height .6s ease;
+  -o-transition: height .6s ease;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+#buttonForm .widget .pop-up {
+  float: right;
+  margin-top: 5px;
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .2s ease-in-out;
+  transform-origin: 0 100%;
+  -webkit-transform-origin: 0 100%;
+  transition: -webkit-transform .5s ease;
+  transform: translate3d(0,0,0);
+  transition: opacity .4s;
+  opacity: 1;
+}
+
+.oculto {
+  opacity: 0 !important;
+}
+
+#buttonForm .widget .pop-up .pop-up-circle {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  float: right;
+  padding: 5px;
+  margin: 0 10px 15px 0;
+  position: relative;
+  box-shadow: 0 5px 16px 0 rgba(0,0,0,.32);
+  background-color: #fe7e0b;
+  -webkit-animation: fadein .3s;
+  -moz-animation: fadein .3s;
+  -ms-animation: fadein .3s;
+  -o-animation: fadein .3s;
+  animation: fadein .3s;
+}
+
+#buttonForm .widget .pop-up .pop-up-circle .pop-up-icon {
+  color: white;
+  margin: 0;
+  font-weight: 700;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#buttonForm .widget .pop-up .pop-up-circle .pop-up-icon .pop-up-icon-msg {
+  margin: auto;
+}
+
+#buttonForm .widget .form-container {
+  height: 100%;
+  overflow-x: hidden;
+  position: relative;
+  transition: opacity .5s;
+  opacity: 0;
+}
+
+.mostrar {
+  opacity: 1 !important;
+}
+
+.zero-height {
+  height: 0 !important;
+}
+
+#buttonForm .widget .form-container .form-window {
+  background: #f7f7f7;
+  border-radius: 7px 7px 0 0;
+  border: 1px solid #ccc;
+  height: calc(100% - 2px);
+  width: calc(100% - 2px);
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  transition: height 600ms;
+}
+
+#buttonForm .widget .form-container .form-window .form-header {
+  width: 100%;
+  height: 53px;
+  background-color: #fff;
+  font-size: 20px;
+  padding: 5px;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-around;
+  flex-direction: column;
+  box-shadow: -2px 1px 10px 1px #c3c3c3;
+  align-items: center;
+}
+
+#buttonForm .widget .form-container .form-window .form-header>div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+}
+
+#buttonForm .widget .form-container .form-window .form-header .form-header-title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+}
+
+#buttonForm .widget .form-container .form-window .form-header .form-header-title .form-text {
+  display: inline-block;
+}
+
+#buttonForm .widget .form-container .form-window .form-header .form-header-title .form-text .form-title {
+  color: #000;
+  font-size: 16px;
+}
+
+#buttonForm .widget .form-container .form-window .form-header .form-header-button {
+  display: flex;
+  align-items: center;
+}
+
+#buttonForm .widget .form-container .form-window .form-header .form-header-button .form-cancel {
+  cursor: s-resize;
+  margin-left: 15px;
+}
+
+#buttonForm .widget .form-container .form-window .form-body {
+  width: 100%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  height: 385px;
+  max-height: 385px;
+}
+
+#buttonForm .widget .form-container .form-window .form-body>form {
+  margin: 0 10px;
+  padding-top: 14px;
+}
+
+.btn-mgi {
+  color: #ffffff;
+  background-color: #fe7e0b;
+  border-color: #fe7e0b;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#buttonForm .widget .form-container .form-window .form-footer {
+  text-align: center;
+  font-family: helvetica,sans-serif;
+  color: #aaa!important;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+}
+
+#buttonForm .widget .form-container .form-window .form-footer .form-footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  background-color: #f7f7f7;
+}
+
+#buttonForm .widget .form-container .form-window .form-footer .form-footer-wrapper .form-footer-powered {
+  width: 100%;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f7f7;
+}
+
+#buttonForm .widget .form-container .form-window .form-footer .form-footer-wrapper .form-footer-powered span {
+  color: #aaa!important;
+  max-height: 22px;
+  box-sizing: border-box;
+  font-family: nunito,helvetica neue,sans-serif;
+  font-size: 11px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: #f7f7f7;
+  padding: 10px 0;
+  border: 1px solid #ccc;
+  width: 48%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 0!important;
+  border: none!important;
+  width: fit-content!important;
+  margin-bottom: 0!important;
+  white-space: nowrap;
+}
