@@ -271,3 +271,18 @@
   margin-bottom: 0!important;
   white-space: nowrap;
 }
+
+#buttonForm .widget .form-container .form-window .form-body .form-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#buttonForm .widget .form-container .form-window .form-body .form-message .form-message-text {
+  text-align: center;
+}
+
+#buttonForm .widget .form-container .form-window .form-body .form-message .form-message-p {
+  margin-bottom: 25px;
+}
