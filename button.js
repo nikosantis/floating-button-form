@@ -6,6 +6,7 @@ const cancelResponse = document.querySelector('#msgClose')
 const formWindow = document.querySelector('.form-window')
 const form = document.querySelector('#form-submit')
 const formMsg = document.querySelector('#formMsg')
+const loadingSpinner = document.querySelector('#loadingSpinner')
 
 let statusForm = {
   enviado: false,
@@ -40,7 +41,7 @@ form.onsubmit = function(event) {
         formMsg.style.display = 'none'
       }, 500)
     }
-  }, 1000)
+  }, 2000)
 }
 
 popUp.onclick = function() {
